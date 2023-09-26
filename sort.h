@@ -26,6 +26,23 @@ void selection_sort(int *array, size_t size);
 int lomuto_partition(int *array, int low, int high, size_t size);
 void quick_sort_recursive(int *array, int low, int high, size_t size);
 void quick_sort(int *array, size_t size);
+void shell_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
+void merge(int *array, int *temp, size_t left, size_t mid, size_t right);
+void merge_sort_helper(int *array, int *temp, size_t left, size_t right);
+void merge_sort(int *array, size_t size);
+void heapify(int *array, size_t size, int i);
+void heap_sort(int *array, size_t size);
+int get_max(int *array, size_t size);
+void counting_sort(int *array, size_t size, int exp);
+void radix_sort(int *array, size_t size);
+void bitonic_compare(int *array, size_t size, int dir);
+void bitonic_merge(int *array, size_t size, int dir);
+void bitonic_sort_recursive(int *array, size_t size, int dir);
+void bitonic_sort(int *array, size_t size);
+int hoare_partition(int *array, int low, int high, size_t size);
+void hoare_quick_sort(int *array, int low, int high, size_t size);
+void quick_sort_hoare(int *array, size_t size);
 
 #endif /* SORT_H */
 
