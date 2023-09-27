@@ -24,12 +24,12 @@ int get_max(int *array, size_t size)
 }
 
 /**
- * countingSort - Sorts the array based on a significant digit using Counting Sort.
+ * counting_sorter - Sorts the array based on a significant digit using Counting Sort.
  * @array: The array to be sorted.
  * @size: The size of the array.
  * @exp: The current significant digit.
  */
-void counting_sort(int *array, size_t size, int exp)
+void counting_sorter(int *array, size_t size, int exp)
 {
     int *output = malloc(sizeof(int) * size);
     int count[10] = {0};
@@ -81,7 +81,7 @@ void radix_sort(int *array, size_t size)
 
     for (exp = 1; max / exp > 0; exp *= 10)
     {
-        counting_sort(array, size, exp);
+        counting_sorter(array, size, exp);
     }
 }
 
