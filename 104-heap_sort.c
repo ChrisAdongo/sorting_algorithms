@@ -40,6 +40,7 @@ void heapify(int *array, size_t size, int i)
  */
 void heap_sort(int *array, size_t size)
 {
+<<<<<<< HEAD
 	int i;
 
 	if (array == NULL || size < 2)
@@ -62,4 +63,23 @@ void heap_sort(int *array, size_t size)
 		}
 		heapify(array, i, 0);
 	}
+=======
+    int i;
+    
+    if (array == NULL || size < 2)
+        return;
+
+    for (i = size / 2 - 1; i >= 0; i--)
+        heapify(array, size, i);
+
+    for (i = size - 1; i >= 0; i--)
+    {
+        int temp = array[0];
+        array[0] = array[i];
+        array[i] = temp;
+        if (i != 0)
+            print_array(array, size);
+        heapify(array, i, 0);
+    }
+>>>>>>> fc5ca68028bf5bfcb2b2c437462251a6f6ddab9e
 }
